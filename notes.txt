@@ -1,0 +1,37 @@
+## create docker-compose file
+> docker-compose up -d
+
+## properties file
+when we have application-dev.yml file it will inherit all the properties of application.yml file
+
+##
+when we load the user, we eagerly load the user roles. Roles will have a list of users. So, it will load the list of users. And it will be a kind of loop.
+
+## generate secret key online
+https://secretkeygen.vercel.app/
+
+## check mail
+after docker-compose up , we can go to http://localhost:1080/#/
+If we receive any mail it will be displayed in that page
+
+## make sure you run docker-compose, if it is up and running then start the application
+
+## Documentation : openapi
+
+
+1. user registration
+2. user login
+3. user account activation
+4. implement auditing
+5. book share, return
+6. save feedback
+7. documentation
+
+8. login page
+9. registration page
+10. account activation page
+11. book listing page
+12. my book page
+13. create, update, share feature
+14. returned book page
+15. logout
