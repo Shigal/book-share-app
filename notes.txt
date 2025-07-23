@@ -17,6 +17,19 @@ If we receive any mail it will be displayed in that page
 ## make sure you run docker-compose, if it is up and running then start the application
 
 ## Documentation : openapi
+http://localhost:8088/api/v1/swagger-ui/index.html
+
+## create angular project
+npm list -g @angular/cli
+ng version
+ng new book-share-frontend
+
+## install bootstrap
+https://getbootstrap.com/
+go to terminal: npm i bootstrap@5.3.7
+
+## install fontawesome
+$ npm i --save @fortawesome/fontawesome-free
 
 
 1. user registration
