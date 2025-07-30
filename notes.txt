@@ -31,6 +31,14 @@ go to terminal: npm i bootstrap@5.3.7
 ## install fontawesome
 $ npm i --save @fortawesome/fontawesome-free
 
+## copy into the angular app the api specification
+http://localhost:8088/api/v1/v3/api-docs
+
+## install openapi for angular: generates model interfaces and web service clients from an OpenApi 3 specification
+$ npm i ng-openapi-gen
+$ ng-openapi-gen --input ./src/openapi/openapi.json --output ./src/app/services
+> npm run api-gen <-- if we make any change in api specification then we need to rerun the command to get all the changes
+
 
 1. user registration
 2. user login
