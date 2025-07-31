@@ -40,6 +40,20 @@ $ ng-openapi-gen --input ./src/openapi/openapi.json --output ./src/app/services
 > npm run api-gen <-- if we make any change in api specification then we need to rerun the command to get all the changes
 
 
+## generate components
+ng g c login
+
+## CORS
+Access to XMLHttpRequest at 'http://localhost:8088/api/v1/auth/authenticate' from origin 'http://localhost:4200' has been blocked by CORS policy:
+Response to preflight request doesn't pass access control check:
+No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+
+## user login:
+pp@gmail.com/12345678
+
+## check the JWT token that we stored in local storage: jwt.io
+
 1. user registration
 2. user login
 3. user account activation
