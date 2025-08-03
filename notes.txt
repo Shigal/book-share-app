@@ -54,6 +54,10 @@ pp@gmail.com/12345678
 
 ## check the JWT token that we stored in local storage: jwt.io
 
+## install
+npm i angular-code-input
+
+
 1. user registration
 2. user login
 3. user account activation
