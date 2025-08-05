@@ -14,6 +14,7 @@ public class BookMapper {
                 .id(bookRequest.id())
                 .title(bookRequest.title())
                 .authorName(bookRequest.authorName())
+                .isbn(bookRequest.isbn())
                 .synopsis(bookRequest.synopsis())
                 .archived(false)
                 .shareable(bookRequest.shareable()).build();
