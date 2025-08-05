@@ -1,6 +1,14 @@
 ## create docker-compose file
 > docker-compose up -d
 
+- Docker will create and start the containers and network defined in that file.
+- Docker creates a custom bridge network named spring-demo:>docker network create spring-demo,
+This allows your services (postgres, mail-dev) to communicate by container name (postgres, mail-dev) within the same virtual network.
+- Docker creates a named volume called postgres, used to persist Postgres data:>docker volume create postgres,
+This ensures your database data is not lost if the container is stopped or removed.
+- A container named postgres-sql-bsa is created and started
+- A container named mail-dev-bsa is started
+
 ## properties file
 when we have application-dev.yml file it will inherit all the properties of application.yml file
 
@@ -57,6 +65,28 @@ pp@gmail.com/12345678
 ## install
 npm i angular-code-input
 
+## generate book module
+ng g m book --routing
+
+## generate main component
+ng g c main
+
+## generate menu component
+ng g c menu
+
+## generate book list component
+ng g c book-list
+
+## generate interceptor
+ng g interceptor http-token
+
+## generate book card component
+ng g c book-card
+
+## if the cover image is not available, then generate a random image
+
+## generate rating component
+ng g c rating
 
 1. user registration
 2. user login

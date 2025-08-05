@@ -1,0 +1,33 @@
+<div class="card" style="width: 20rem;">
+    <img height="200" class="card-img-top" alt="..." [src]="bookCover">
+    <div class="card-body overflow-scroll">
+        <h5 class="card-title fs-6 text-nowrap fw-bold mb-1"><i class="fa-solid fa-book"></i>&nbsp;{{book.title}}</h5>
+        <h5 class="card-subtitle fs-6 text-secondary mb-1"><i
+                class="fa-solid fa-user-check"></i>&nbsp;{{book.authorName}}</h5>
+        <h5 class="card-subtitle fs-6 text-secondary mb-1"><i class="fa-solid fa-code"></i>&nbsp;{{book.isbn}}</h5>
+        <h5 class="card-subtitle fs-6 text-secondary"><i class="fa-solid fa-user"></i>&nbsp;{{book.owner}}</h5>
+        <hr>
+        <p class="card-text">{{book.synopsis}}</p>
+    </div>
+    <div class="card-footer d-flex gap-2 justify-content-between align-items-center">
+        <div class="d-flex gap-2">
+            <app-rating [rating]="book.rate || 0"></app-rating>
+            @if (book.rate || 0 > 0) {
+            <span class="fw-bold">{{book.rate}}</span>
+            }
+        </div>
+        @if (!manage) {
+        <div class="d-flex gap-2">
+            <i (click)="showDetails()" class="fas fa-circle-info text-primary"></i>
+            <i (click)="borrowBook()" class="fas fa-list-check text-primary"></i>
+            <i (click)="addBookToWaitingList()" class="fas fa-heart text-danger"></i>
+        </div>
+        } @else {
+        <div class="d-flex gap-2">
+            <i (click)="editBook()" class="fas fa-edit text-success"></i>
+            <i (click)="shareBook()" class="fas fa-share-nodes text-primary"></i>
+            <i (click)="archiveBook()" class="fas fas fa-archive text-danger"></i>
+        </div>
+        }
+    </div>
+</div>
