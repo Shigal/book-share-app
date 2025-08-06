@@ -97,6 +97,12 @@ ng g c manage-book
 ## generate borrowed-book component
 ## generate returned-book component
 
+## generate auth guard
+ng g guard auth
+
+## install the dependency to decode the token
+npm install @auth0/angular-jwt
+
 1. user registration
 2. user login
 3. user account activation
