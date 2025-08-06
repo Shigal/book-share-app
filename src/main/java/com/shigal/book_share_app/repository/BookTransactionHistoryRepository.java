@@ -22,7 +22,7 @@ public interface BookTransactionHistoryRepository extends JpaRepository<BookTran
             FROM BookTransactionHistory history
             WHERE history.book.owner.id = :userId
             """)
-    Page<BookTransactionHistory> findAllReturnedBooks(Pageable pageable, Integer id);
+    Page<BookTransactionHistory> findAllReturnedBooks(Pageable pageable, Integer userId);
 
     @Query("""
             SELECT

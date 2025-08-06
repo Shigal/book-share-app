@@ -33,12 +33,12 @@ public class FeedbackService {
     public Integer saveFeedback(@Valid FeedbackRequest feedbackRequest, Authentication associatedUser) {
         Book book = bookRepository.findById(feedbackRequest.bookId())
                 .orElseThrow(() -> new EntityNotFoundException("No book found with the id: " + feedbackRequest.bookId()));
-        if(!book.isArchived() ||  !book.isShareable()) {
+        if(book.isArchived() ||  !book.isShareable()) {
             throw new OperationNotPermittedException("You cannot give a feedback for an archived or not shareable book");
         }
         User user = (User) associatedUser.getPrincipal();
-        if (!Objects.equals(book.getOwner().getId(), user.getId())) {
-            throw new OperationNotPermittedException("You cannot give a feeback to your own book");
+        if (Objects.equals(book.getOwner().getId(), user.getId())) {
+            throw new OperationNotPermittedException("You cannot give a feedback to your own book");
         }
         Feedback feedBack = feedbackMapper.mapToFeedback(feedbackRequest);
         return feedbackRepository.save(feedBack).getId();
