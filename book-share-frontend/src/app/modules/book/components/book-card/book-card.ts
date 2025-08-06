@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BookResponse } from '../../../../services/models';
 import { Rating } from '../rating/rating';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book-card',
   imports: [
+    CommonModule,
     Rating
   ],
   templateUrl: './book-card.html',
@@ -50,6 +52,7 @@ export class BookCard {
     this.details.emit(this._book);
   }
   borrowBook(){
+    console.log('-------- borrow clicked----')
     this.borrow.emit(this._book);
   }
   addBookToWaitingList(){

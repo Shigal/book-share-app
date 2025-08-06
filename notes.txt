@@ -88,6 +88,15 @@ ng g c book-card
 ## generate rating component
 ng g c rating
 
+## generate my-book component
+ng g c my-books
+
+## generate manage-book component
+ng g c manage-book
+
+## generate borrowed-book component
+## generate returned-book component
+
 1. user registration
 2. user login
 3. user account activation

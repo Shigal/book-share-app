@@ -1,13 +1,13 @@
 <div class="rating">
-    @for(_ of [].constructor(fullStars); track _) {
-        <i class="fas fa-star text-warning"></i>
-    }
+    <!-- @for(_ of [].constructor(fullStars); track _) { -->
+        <i class="fas fa-star text-warning" *ngFor="let _ of [].constructor(fullStars)"></i>
+    <!-- } -->
     
-    @if (hasHalfStar) {
-        <i class="fas fa-star-half-alt text-warning"></i>
-    }
-     @for(_ of [].constructor(emptyStar); track _) {
-        <i class="fas fa-star"></i>
-    }
+    <!-- @if (hasHalfStar) { -->
+        <i class="fas fa-star-half-alt text-warning" *ngIf="hasHalfStar"></i>
+    <!-- } -->
+     <!-- @for(_ of [].constructor(emptyStar); track _) { -->
+        <i class="fas fa-star" *ngFor="let _ of [].constructor(emptyStar)"></i>
+    <!-- } -->
 
 </div> 
